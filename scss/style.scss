@@ -1,0 +1,203 @@
+@import 'variables';
+@import 'utilities';
+@import 'item_grid';
+// -----------------------HEADER/NAVBAR------------------//
+//1.Header
+#header-home{
+  background: $bg-image no-repeat center /cover;
+  height:100vh;
+  // font-weight: 1000;
+  color: $light-color;
+
+
+}
+
+
+
+//2.======================Nav Bar ==========================//
+#main-nav{
+  // This seperates LOGO from LIST
+  display:flex;
+  justify-content: space-between;
+  padding-top:1rem;
+  align-content: center;
+
+
+
+  //Nested Logo On Left
+  #logo{
+    width: 12rem;
+    height: 4rem;
+    object-fit: contain;
+    padding: 1 rem 1.5rem;
+    color:#fff;
+    text-transform: uppercase;
+    padding-left: 1rem;
+    font-style: italic;
+    // border: 2px black solid;
+  }
+  // Nest List on right
+  ul{
+    // This serperates the LI from each other
+    display:flex;
+  }
+  
+  li{
+    padding: 1rem 1.5rem;
+    }
+  // List of Navigation
+  a{
+    text-decoration: none;
+    font-size: larger;
+    color: #fff;
+    text-transform: uppercase;
+    // The reason we have a transparent border is because of the hover effect
+    // If we want to underline the word with a hover (withotu moving the text need transparent border)
+    border-bottom: 3px transparent solid;
+    padding-bottom:0.5rem;
+    transition: border-color 0.5;
+
+    &:hover{
+      border-color:$primary-color;
+    }
+
+    &.current{
+      border-color: $primary-color;
+    }
+  }
+  .top{
+    background-color: transparent;
+  }
+}
+
+// =================3.Showcase Content ---- Below Nav Bar Area
+#header-content{
+  text-align: center;
+  padding-top:20%;
+
+  h1{
+    font-size:4rem;
+    line-height:1.2;
+  }
+}
+
+//Lead (text under showcase)
+.lead{
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+
+// Media Query for Mobile
+@media(max-width:768px){
+  #header-home{
+    background: $bg-phone no-repeat center /cover;
+      height:100vh;
+      color: $dark-color;
+  }
+
+  .lead{
+    font-size:1.4rem;
+    color: $dark-color;
+  }
+}
+
+
+//=================4 . Home Sections
+#home {
+  // Home Section A
+  &-a {
+    .specials {
+      margin-top: 3rem;
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+
+      .fas {
+        color: $main-color;
+        padding-bottom: 0.4rem;
+      }
+      .fab{
+        color: $main-color;
+        padding-bottom: 0.4rem;
+      }
+      .fa{
+        color: $main-color;
+        padding-bottom: 0.4rem;
+      }
+
+    }
+  }
+
+  // Home Section B
+  &-b {
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      li {
+        line-height: 2;
+
+        &.stats-title {
+          font-size: 1.5rem;
+        }
+
+        &.stats-number {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+      }
+
+      div {
+        padding: 3rem 0;
+
+        &:nth-child(odd) {
+          background: $light-color;
+        }
+
+        &:nth-child(even) {
+          background: $medium-color;
+        }
+      }
+    }
+  }
+}
+
+#main-footer{
+  background: $dark-color;
+  color:#fff;
+  height:5rem;
+
+  .footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    @media (max-width:$screen-width)
+    {
+      flex-direction: column;
+    }
+  }
+
+  .footer-socialmedia .fab
+  {
+    margin-right: 1rem;
+    border: 2px #fff solid;
+    border-radius: 50%;
+    height:2rem;
+    width: 2rem;
+    // line-height: 1.2rem;
+    text-align: center;
+    padding:0.5rem;
+
+    &:hover{
+      background-color: $main-color;
+    }
+
+  }
+  .footer-socialmedia i{
+    padding-left: 1.5rem;
+  }
+
+}
