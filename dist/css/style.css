@@ -3,10 +3,14 @@
   padding: 0; }
 
 body {
-  background: #ffff;
+  background: #fff;
   color: #333;
   font-family: "Dosis", sans-serif;
   line-height: 1.6; }
+
+.div-nomargin {
+  padding: 0;
+  margin: 0; }
 
 a {
   color: #FFF;
@@ -48,6 +52,16 @@ img {
     .flex-container {
       flex-direction: column-reverse; } }
 
+.twoboxgrid {
+  display: grid;
+  grid-template-areas: 'img bio bio';
+  grid-gap: 1.2rem; }
+
+.twoboxgrid-reverse {
+  display: grid;
+  grid-template-areas: 'bio bio bio img img';
+  grid-gap: 1.2rem; }
+
 .btn-main, .btn-light, .btn-dark {
   display: inline-block;
   padding: 0.8rem 2rem;
@@ -61,7 +75,7 @@ img {
 
 .btn-light {
   color: #333;
-  background-color: #ffff; }
+  background-color: #f4f4f4; }
 
 .btn-dark {
   color: #f4f4f4;
@@ -75,21 +89,25 @@ input[class^='btn-']:hover {
 .text-center {
   text-align: center; }
 
+.text-justify {
+  margin-top: 1rem;
+  text-align: justify; }
+
 .bg-main {
   background: #ffbc00;
-  color: set-text-color(#ffbc00); }
+  color: #fff; }
 
 .bg-dark {
   background: #333;
-  color: set-text-color(#333); }
+  color: #fff; }
 
 .bg-light {
-  background: #ffff;
-  color: set-text-color(#ffff); }
+  background: #f4f4f4;
+  color: #000; }
 
 .bg-medium {
   background: #ccc;
-  color: set-text-color(#ccc); }
+  color: #000; }
 
 .py-1 {
   padding: 1rem 0; }
@@ -98,7 +116,8 @@ input[class^='btn-']:hover {
   padding: 2rem 0; }
 
 .py-3 {
-  padding: 3rem 0; }
+  padding-top: 3rem;
+  padding-bottom: 1rem; }
 
 .py-4 {
   padding: 4rem 0; }
@@ -130,10 +149,40 @@ input[class^='btn-']:hover {
   display: block;
   margin: 0 auto 1rem auto; }
 
+.ptop-1 {
+  padding-top: 1rem; }
+
 #header-home {
   background: url("../img/showcase.jpg") no-repeat center/cover;
   height: 100vh;
-  color: #ffff; }
+  color: #f4f4f4; }
+
+#header-secondary {
+  background: url("../img/showcase3.jpg") no-repeat 50% 36%/cover;
+  height: 7rem;
+  border-bottom: solid #ffbc00 3px;
+  color: #fff; }
+
+#header-content {
+  text-align: center;
+  padding-top: 20%; }
+  #header-content h1 {
+    font-size: 4rem;
+    line-height: 1.2; }
+
+.lead {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  text-transform: capitalize; }
+
+@media (max-width: 768px) {
+  #header-home {
+    background: url("../img/showcase3.jpg") no-repeat center/cover;
+    height: 100vh;
+    color: #333; }
+  .lead {
+    font-size: 1.4rem;
+    color: #333; } }
 
 #main-nav {
   display: flex;
@@ -168,27 +217,6 @@ input[class^='btn-']:hover {
   #main-nav .top {
     background-color: transparent; }
 
-#header-content {
-  text-align: center;
-  padding-top: 20%; }
-  #header-content h1 {
-    font-size: 4rem;
-    line-height: 1.2; }
-
-.lead {
-  margin-bottom: 2rem;
-  font-size: 1.4rem;
-  text-transform: capitalize; }
-
-@media (max-width: 768px) {
-  #header-home {
-    background: url("../img/showcase3.jpg") no-repeat center/cover;
-    height: 100vh;
-    color: #333; }
-  .lead {
-    font-size: 1.4rem;
-    color: #333; } }
-
 #home-a .specials {
   margin-top: 3rem;
   display: grid;
@@ -217,7 +245,7 @@ input[class^='btn-']:hover {
   #home-b .stats div {
     padding: 3rem 0; }
     #home-b .stats div:nth-child(odd) {
-      background: #ffff; }
+      background: #f4f4f4; }
     #home-b .stats div:nth-child(even) {
       background: #ccc; }
 
@@ -237,11 +265,51 @@ input[class^='btn-']:hover {
     margin-right: 1rem;
     border: 2px #fff solid;
     border-radius: 50%;
-    height: 2rem;
-    width: 2rem;
+    height: 1rem;
+    width: 1rem;
     text-align: center;
     padding: 0.5rem; }
     #main-footer .footer-socialmedia .fab:hover {
       background-color: #ffbc00; }
   #main-footer .footer-socialmedia i {
     padding-left: 1.5rem; }
+
+#about p {
+  text-align: justify; }
+
+#about-a .bio-image {
+  grid-area: img; }
+
+#about-a .textbox {
+  grid-area: bio;
+  border-left: 2px solid #ffbc00;
+  padding: 0.8rem; }
+
+#about-a .lead {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  text-transform: none;
+  font-style: italic; }
+
+#about-b .bio-image {
+  grid-area: img; }
+
+#about-b .specialcase {
+  max-height: 420px;
+  object-fit: cover;
+  object-position: 10% 0; }
+
+#about-b .textbox {
+  grid-area: bio;
+  text-align: center;
+  border-right: 2px solid #ffbc00;
+  padding: 0.8rem; }
+
+#about-b .lead {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  text-transform: none;
+  font-style: italic; }
+
+#about h4 {
+  padding-top: 4rem; }

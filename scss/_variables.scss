@@ -6,9 +6,18 @@ $main-color: #ffbc00;
 $medium-color:#ccc;
 $medium-color:#ccc;
 $light-color: #f4f4f4;
-$light-color: #ffff;
 $dark-color: #333;
 $font-stack: 'Dosis', sans-serif;
+
+// Set Text Color
+@function set-text-color($color) {
+    @if (lightness($color) > 50) {
+      @return #000;
+    } @else {
+      @return #fff;
+    }
+  }
+  
 
 $bg-image:url('../img/showcase.jpg');
 $bg-phone:url('../img/showcase3.jpg');

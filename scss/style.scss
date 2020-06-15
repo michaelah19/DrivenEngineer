@@ -1,6 +1,10 @@
 @import 'variables';
 @import 'utilities';
 @import 'item_grid';
+
+.ptop-1{
+  padding-top: 1rem;
+}
 // -----------------------HEADER/NAVBAR------------------//
 //1.Header
 #header-home{
@@ -8,13 +12,50 @@
   height:100vh;
   // font-weight: 1000;
   color: $light-color;
+}
 
-
+// Header Pages for About, Work & Contact Me
+#header-secondary{
+  background: $bg-phone no-repeat 50% 36% /cover;
+  height: 7rem;
+  border-bottom: solid $main-color 3px;
+  color: #fff;
 }
 
 
+// =================2.Header Showcase/Content==============Below Nav Bar Area
+#header-content{
+  text-align: center;
+  padding-top:20%;
 
-//2.======================Nav Bar ==========================//
+  h1{
+    font-size:4rem;
+    line-height:1.2;
+  }
+}
+
+//Lead (text under showcase)
+.lead{
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+
+// Media Query for Mobile
+@media(max-width:768px){
+  #header-home{
+    background: $bg-phone no-repeat center /cover;
+      height:100vh;
+      color: $dark-color;
+  }
+
+  .lead{
+    font-size:1.4rem;
+    color: $dark-color;
+  }
+}
+
+//3.=================================Nav Bar ==========================//
 #main-nav{
   // This seperates LOGO from LIST
   display:flex;
@@ -70,40 +111,8 @@
   }
 }
 
-// =================3.Showcase Content ---- Below Nav Bar Area
-#header-content{
-  text-align: center;
-  padding-top:20%;
 
-  h1{
-    font-size:4rem;
-    line-height:1.2;
-  }
-}
-
-//Lead (text under showcase)
-.lead{
-    margin-bottom: 2rem;
-    font-size: 1.4rem;
-    text-transform: capitalize;
-}
-
-// Media Query for Mobile
-@media(max-width:768px){
-  #header-home{
-    background: $bg-phone no-repeat center /cover;
-      height:100vh;
-      color: $dark-color;
-  }
-
-  .lead{
-    font-size:1.4rem;
-    color: $dark-color;
-  }
-}
-
-
-//=================4 . Home Sections
+//=================4 . Home Sections ======================
 #home {
   // Home Section A
   &-a {
@@ -163,6 +172,8 @@
   }
 }
 
+
+// ================== 5. Footer ==========================
 #main-footer{
   background: $dark-color;
   color:#fff;
@@ -185,8 +196,8 @@
     margin-right: 1rem;
     border: 2px #fff solid;
     border-radius: 50%;
-    height:2rem;
-    width: 2rem;
+    height:1rem;
+    width: 1rem;
     // line-height: 1.2rem;
     text-align: center;
     padding:0.5rem;
@@ -199,5 +210,69 @@
   .footer-socialmedia i{
     padding-left: 1.5rem;
   }
+
+}
+
+
+// ==================6.About =============================
+#about
+{
+  // First Section - About ME
+  p{
+    text-align: justify;
+  }
+  &-a{
+    .bio-image{
+    grid-area:img;
+    }
+    .textbox{
+      grid-area:bio;
+      border-left: 2px solid $main-color;
+      padding:0.8rem;
+    }
+    .lead{
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      text-transform: none;
+      font-style: italic;
+    }
+
+  } 
+
+  &-b{
+    .bio-image{
+    grid-area:img;
+  }
+    .specialcase{
+      max-height: 420px;
+      object-fit: cover;
+      object-position: 10% 0;
+    }
+
+
+    .textbox{
+      grid-area:bio;
+      text-align: center;
+      border-right: 2px solid $main-color;
+      padding:0.8rem;
+    }
+    .lead{
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      text-transform: none;
+      font-style: italic;
+    }
+
+  } 
+
+
+  // Targgetint the h4 adn P in about
+  h4{
+    padding-top: 4rem;
+  }
+
+}
+
+#about-specialcase{
 
 }
