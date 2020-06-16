@@ -5,6 +5,11 @@
   padding: 0;
 }
 
+// To move to certain id in a smooth way
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #fff;
   color: $dark-color;
