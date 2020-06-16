@@ -289,28 +289,25 @@
   }
   
   &-awards{
-    .box1{
-      grid-area: box1;
-    }
-
-    .box2{
-      grid-area: box2;
-
-    }
-    .box3{
-      grid-area: box3;
-    }
+    // Headers need bottom borders only for award section (Honors, Scholarships, Udemyclasses)
     h4{
       padding: 0;
       margin-top: 1.2rem;
       border-bottom: 1px solid black;
     }
+    // Special Exception to align the flex elements (disable to see difference)
     .flex-container{
       align-items: flex-start;
     }
-
+    // Each Box is an element, when phone version, need to make box bigger since they are stacked on each other)
     .box{
       width:30%;
+      @media (max-width:$screen-width)
+      {
+        margin: auto;
+        width:70%;
+      }
+
 
       a{
         color: $dark-color;
@@ -322,6 +319,32 @@
     }
 
   }
+
+  &-skills{
+    p{
+      font-size: 1.2rem;
+      text-transform: none;
+    }
+    .progress{
+      // Makes sure that the figure is contained
+      overflow:hidden;
+      height: 20px;
+      background-color: $medium-color;
+      border-radius: 5px;
+      margin-bottom: 0.6rem;
+      // The div with the width style
+      div{
+        // Make sure it fills up vertically
+        height:100%;
+        text-align: center;
+        // Color of progress
+        background-color: $main-color;
+      }
+    }
+    
+  }
+
+
 
 
   

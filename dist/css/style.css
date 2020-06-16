@@ -51,7 +51,9 @@ img {
   justify-content: space-evenly; }
   @media (max-width: 800px) {
     .flex-container {
-      flex-direction: column-reverse; } }
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center; } }
 
 .twoboxgrid {
   display: grid;
@@ -398,15 +400,6 @@ input[class^='btn-']:hover {
 #work-b .textbox {
   min-height: 200px; }
 
-#work-awards .box1 {
-  grid-area: box1; }
-
-#work-awards .box2 {
-  grid-area: box2; }
-
-#work-awards .box3 {
-  grid-area: box3; }
-
 #work-awards h4 {
   padding: 0;
   margin-top: 1.2rem;
@@ -417,7 +410,26 @@ input[class^='btn-']:hover {
 
 #work-awards .box {
   width: 30%; }
+  @media (max-width: 800px) {
+    #work-awards .box {
+      margin: auto;
+      width: 70%; } }
   #work-awards .box a {
     color: #333; }
     #work-awards .box a:hover {
       color: #0000EE; }
+
+#work-skills p {
+  font-size: 1.2rem;
+  text-transform: none; }
+
+#work-skills .progress {
+  overflow: hidden;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 5px;
+  margin-bottom: 0.6rem; }
+  #work-skills .progress div {
+    height: 100%;
+    text-align: center;
+    background-color: #ffbc00; }

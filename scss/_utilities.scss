@@ -68,6 +68,8 @@ img{
 
   @media(max-width:800px){
     flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -108,6 +110,7 @@ img{
   // Allow some space between areas
   grid-gap:1.2rem;
 }
+
 //button
 %btn-shared{
     display:inline-block;
