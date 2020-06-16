@@ -276,3 +276,53 @@
 #about-specialcase{
 
 }
+
+
+// 3. -----------------WORK Section----------------------//
+
+#work{
+
+  &-b{
+    .textbox{
+      min-height:200px;
+    }
+  }
+  
+  &-awards{
+    .box1{
+      grid-area: box1;
+    }
+
+    .box2{
+      grid-area: box2;
+
+    }
+    .box3{
+      grid-area: box3;
+    }
+    h4{
+      padding: 0;
+      margin-top: 1.2rem;
+      border-bottom: 1px solid black;
+    }
+    .flex-container{
+      align-items: flex-start;
+    }
+
+    .box{
+      width:30%;
+
+      a{
+        color: $dark-color;
+
+        &:hover{
+          color: $link-color;
+        }
+      }
+    }
+
+  }
+
+
+  
+}
