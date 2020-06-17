@@ -1,5 +1,4 @@
 @media(max-width:800px){
-
     // Generic/Repeat Items that Should be Different on Phone
     #main-footer{
         height: 3rem;
@@ -159,7 +158,6 @@
             
             }
         }
-        
         &-c{
             padding: 1rem 0;
             h3{
@@ -171,7 +169,7 @@
 }
 
 
-
+// Lanscape version
  @media(max-height:580px){
     #header-home{
         background: $bg-image no-repeat center right/cover;
