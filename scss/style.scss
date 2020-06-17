@@ -41,21 +41,8 @@
     text-transform: capitalize;
 }
 
-// Media Query for Mobile
-@media(max-width:768px){
-  #header-home{
-    background: $bg-phone no-repeat center /cover;
-      height:100vh;
-      color: $dark-color;
-  }
 
-  .lead{
-    font-size:1.4rem;
-    color: $dark-color;
-  }
-}
-
-//3.=================================Nav Bar ==========================//
+//3.===========================Nav Bar ==========================//
 #main-nav{
   // This seperates LOGO from LIST
   display:flex;
@@ -92,6 +79,7 @@
     font-size: larger;
     color: #fff;
     text-transform: uppercase;
+
     // The reason we have a transparent border is because of the hover effect
     // If we want to underline the word with a hover (withotu moving the text need transparent border)
     border-bottom: 3px transparent solid;
@@ -114,6 +102,7 @@
 
 //=================4 . Home Sections ======================
 #home {
+
   // Home Section A
   &-a {
     .specials {
@@ -185,10 +174,6 @@
     align-items: center;
     height: 100%;
 
-    @media (max-width:$screen-width)
-    {
-      flex-direction: column;
-    }
   }
 
   .footer-socialmedia .fab
@@ -243,12 +228,6 @@
     .bio-image{
     grid-area:img;
   }
-    .specialcase{
-      max-height: 420px;
-      object-fit: cover;
-      object-position: 10% 0;
-    }
-
 
     .textbox{
       grid-area:bio;
@@ -256,6 +235,7 @@
       border-right: 2px solid $main-color;
       padding:0.8rem;
     }
+
     .lead{
       margin-bottom: 1rem;
       font-size: 1.1rem;
@@ -265,18 +245,12 @@
 
   } 
 
-
   // Targgetint the h4 adn P in about
   h4{
     padding-top: 4rem;
   }
 
 }
-
-#about-specialcase{
-
-}
-
 
 // 3. -----------------WORK Section----------------------//
 
@@ -345,7 +319,7 @@
   }  
 }
 
-// Contact me (this is just copy and paste for now
+// ---------------------------Contact me --------------------------
 // Contact Page
 #contact {
   &-a {
@@ -401,3 +375,7 @@
     }
   }
 }
+
+
+// Import Media Query Last Since YOu want to overwrite anything else
+@import 'media';

@@ -25,6 +25,10 @@ body {
 a{
     color: #FFF;
     text-decoration: none;
+
+    &:hover{
+      color: $link-color;
+    }
 }
 
 ul{
@@ -195,6 +199,7 @@ input[class^='btn-']:hover {
   }
 }
 
+// Margin Classes
 .my{
   &-1 {
     margin: 1rem 0;
@@ -208,6 +213,7 @@ input[class^='btn-']:hover {
   }
 }
 
+// Useful Stuffs
 .section-title {
   font-size: 2rem;
   display: block;
