@@ -388,6 +388,9 @@ input[class^='btn-']:hover {
 #work-b .textbox {
   min-height: 200px; }
 
+#work-awards li {
+  text-align: justify; }
+
 #work-awards h4 {
   padding: 0;
   margin-top: 1.2rem;
@@ -514,6 +517,8 @@ input[class^='btn-']:hover {
     padding: 0 1rem; }
     #work-skills .container {
       padding: 2rem 0; }
+  #work-awards li {
+    text-align: center; }
   #contact-a .text-fields {
     grid-template-areas: 'name' 'subject' 'email' 'phone' 'message'; }
   #contact-b {

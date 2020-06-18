@@ -108,6 +108,7 @@
 
     // -------------Work Section ---------
     #work{
+
         &-b{
             .btn-light{
                 width:220px ;
@@ -123,6 +124,12 @@
 
             .container{
                 padding:2rem 0;
+            }
+        }
+
+        &-awards{
+            li{
+                text-align: center;
             }
         }
     }

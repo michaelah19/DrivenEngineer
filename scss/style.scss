@@ -263,6 +263,10 @@
   }
   
   &-awards{
+    // Making sure the li items text are justify 
+    li{
+      text-align: justify;
+    }
     // Headers need bottom borders only for award section (Honors, Scholarships, Udemyclasses)
     h4{
       padding: 0;
